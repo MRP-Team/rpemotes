@@ -139,6 +139,9 @@ RP.Walks = {
     ["Arrogant"] = {
         "move_f@arrogant@a"
     },
+    ["Bigfoot"] = {
+        "move_characters@orleans@core@"
+    },
     ["Butch"] = {
         "move_m@hurry_butch@a"
     },
@@ -196,6 +199,9 @@ RP.Walks = {
         "move_m@business@c",
         "Cop 3"
     },
+    ["Coward"] = {
+        "move_m@coward"
+    },
     ["Chubbymale"] = {
         "move_chubby",
         "Chubby Male"
@@ -206,6 +212,9 @@ RP.Walks = {
      },
     ["Crouched"] = {
         "move_ped_crouched",
+    },
+    ["Dave"] = {
+        "move_characters@dave_n"
     },
     ["Defaultfemale"] = {
         "move_f@multiplayer",
@@ -264,6 +273,10 @@ RP.Walks = {
     ["Femme"] = {
         "move_f@femme@"
     },
+    ["Femme2"] = {
+        "move_m@femme@",
+        "Femme 2"
+    },
     ["Fire"] = {
         "move_characters@franklin@fire"
     },
@@ -290,6 +303,10 @@ RP.Walks = {
         "move_m@flee@b",
         "Flee 4"
     },
+    ["Flee5"] = {
+        "move_m@flee@c",
+        "Flee 5"
+    },
     ["Franklin"] = {
         "move_p_m_one"
     },
@@ -311,6 +328,10 @@ RP.Walks = {
     ["Gangster5"] = {
         "move_m@gangster@var_i",
         "Gangster 5"
+    },
+    ["Gangster6"] = {
+        "move_f@gangster@ng",
+        "Gangster 6 - Female"
     },
     ["Genenric"] = {
         "move_m@generic",
@@ -392,6 +413,9 @@ RP.Walks = {
         "move_p_m_zero_slow",
         "Janitor 2"
     },
+    ["Jimmy"] = {
+        "move_characters@jimmy"
+    },
     ["Jog"] = {
         "move_m@jog@"
     },
@@ -420,6 +444,9 @@ RP.Walks = {
     ["Muscle"] = {
         "move_m@muscle@a"
     },
+    ["Patricia"] = {
+        "move_characters@patricia"
+    },
     ["Posh"] = {
         "move_m@posh@"
     },
@@ -429,6 +456,9 @@ RP.Walks = {
     },
     ["Quick"] = {
         "move_m@quick"
+    },
+    ["Ron"] = {
+        "move_characters@ron"
     },
     ["Runner"] = {
         "female_fast_runner"
@@ -475,6 +505,10 @@ RP.Walks = {
     ["Swagger"] = {
         "move_m@swagger"
     },
+    ["Swagger2"] = {
+        "move_m@swagger@b",
+        "Swagger 2"
+    },
     ["Tough"] = {
         "move_m@tough_guy@"
     },
@@ -500,6 +534,10 @@ RP.Walks = {
     },
     ["Trevor"] = {
         "move_p_m_two"
+    },
+    ["Veryslow"] = {
+        "move_m@leaf_blower",
+        "Very Slow"
     },
     ["Wide"] = {
         "move_m@bag"
@@ -533,8 +571,8 @@ RP.Shared = {
     -- You don't have to specify targetemotename; If you don't, it will just play the same animation on both.--
     -- targetemote is used for animations that have a corresponding animation to the other player, ie Carry and Be Carried --
     -- Emotes will work with either SyncOffset or Attachto. We can attach players either in front of us, to a specific bone, or either side of us. --
-	
-	
+
+
     ["handshake"] = {
         "mp_ped_interaction",
         "handshake_guy_a",
@@ -1506,7 +1544,7 @@ RP.Shared = {
             xRot = 0.0,
             yRot = 0.0,
             zRot = 0.0,
-            
+
         }
     },
     ["kisscuteneck2"] = {
@@ -1518,7 +1556,7 @@ RP.Shared = {
             EmoteMoving = false,
             EmoteLoop = true,
             --SyncOffsetFront = 0.05,
-            
+
         }
     },
     ["kisscutecheek"] = {
@@ -1538,7 +1576,7 @@ RP.Shared = {
             xRot = 0.0,
             yRot = 0.0,
             zRot = 0.0,
-            
+
         }
     },
     ["kisscutecheek2"] = {
@@ -1550,7 +1588,7 @@ RP.Shared = {
             EmoteMoving = false,
             EmoteLoop = true,
             --SyncOffsetFront = 0.05,
-            
+
         }
     },
     ["kisscutefh"] = {
@@ -1570,7 +1608,7 @@ RP.Shared = {
             xRot = 0.0,
             yRot = 0.0,
             zRot = 0.0,
-            
+
         }
     },
     ["kisscutefh2"] = {
@@ -1582,7 +1620,7 @@ RP.Shared = {
             EmoteMoving = false,
             EmoteLoop = true,
             --SyncOffsetFront = 0.05,
-            
+
         }
     },
     ["coupleanim"] = {
@@ -2981,7 +3019,7 @@ RP.Dances = {
         "ambclub_09_mi_hi_bellydancer_laz",
         "Dance Pride E - Transgender ",
         AnimationOptions = {
-            Prop = 'lilprideflag6', -- Transgender 
+            Prop = 'lilprideflag6', -- Transgender
             PropBone = 18905,
             PropPlacement = {
                 0.0900,
@@ -3146,7 +3184,7 @@ RP.AnimalEmotes = {
         AnimationOptions = {
             EmoteLoop = true
         }
-    },    
+    },
     ["bdoglayright"] = {
         "creatures@rottweiler@move",
         "dead_right",
@@ -3180,7 +3218,7 @@ RP.AnimalEmotes = {
         },
         AdultAnimation = true,
 	AnimalEmote = true
-    }, 
+    },
     ["bdogmhump"] = {
         "creatures@rottweiler@amb@",
         "hump_loop_chop",
@@ -3473,7 +3511,7 @@ RP.AnimalEmotes = {
         "base",
         "Sit Pride F - Transgender  (big dog)",
         AnimationOptions = {
-            Prop = 'lilprideflag6', -- Transgender 
+            Prop = 'lilprideflag6', -- Transgender
             PropBone = 31086,
             PropPlacement = {
                 0.1900,
@@ -3858,7 +3896,7 @@ RP.AnimalEmotes = {
         "idle_turn_0",
         "Dance Pride F - Transgender  (small dog)",
         AnimationOptions = {
-            Prop = 'lilprideflag6', -- Transgender 
+            Prop = 'lilprideflag6', -- Transgender
             PropBone = 31086,
             PropPlacement = {
                 0.1240,
@@ -4651,7 +4689,7 @@ RP.AnimalEmotes = {
         "nill",
         "Pride F - Transgender  (small dog)",
         AnimationOptions = {
-            Prop = 'lilprideflag6', -- Transgender 
+            Prop = 'lilprideflag6', -- Transgender
             PropBone = 31086,
             PropPlacement = {
                 0.1240,
@@ -4822,7 +4860,7 @@ RP.AnimalEmotes = {
         "idle_b",
         "Pride F Sit Transgender   (small dog)",
         AnimationOptions = {
-            Prop = 'lilprideflag6', -- Transgender 
+            Prop = 'lilprideflag6', -- Transgender
             PropBone = 31086,
             PropPlacement = {
                 0.1240,
@@ -7583,7 +7621,7 @@ RP.Emotes = {
             EmoteMoving = true
         }
     },
-    ["posecutef"] = { -- Custom Emote By Pupppy 
+    ["posecutef"] = { -- Custom Emote By Pupppy
         "pupppy@freepose01",
         "freepose01",
         "Cute Pose Female",
@@ -7592,7 +7630,7 @@ RP.Emotes = {
             EmoteMoving = false,
         }
    },
-    ["posecutef2"] = { -- Custom Emote By Pupppy 
+    ["posecutef2"] = { -- Custom Emote By Pupppy
         "pupppy@freepose03",
         "freepose03",
         "Cute Pose Female 2",
@@ -7601,7 +7639,7 @@ RP.Emotes = {
             EmoteMoving = false
         }
     },
-	["posecutef3"] = { -- Custom Emote By Pupppy 
+	["posecutef3"] = { -- Custom Emote By Pupppy
         "pupppy@freepose04",
         "freepose04",
         "Cute Pose Female 3",
@@ -7610,7 +7648,7 @@ RP.Emotes = {
             EmoteMoving = false
         }
     },
-	["posecutef4"] = { -- Custom Emote By QueenSistersAnimations 
+	["posecutef4"] = { -- Custom Emote By QueenSistersAnimations
         "handkylie@queensisters",
         "kylie_clip",
         "Cute Pose Female 4",
@@ -7619,7 +7657,7 @@ RP.Emotes = {
             EmoteMoving = false
         }
     },
-    ["posecutem"] = { -- Custom Emote By Pupppy 
+    ["posecutem"] = { -- Custom Emote By Pupppy
         "pupppy@freepose02",
         "freepose02",
         "Cute Pose Male",
@@ -7628,7 +7666,7 @@ RP.Emotes = {
             EmoteMoving = false
         }
     },
-    ["checkwatch"] = { -- Custom Emote By MissSnowie 
+    ["checkwatch"] = { -- Custom Emote By MissSnowie
         "watch@looking_at",
         "base",
         "Check Watch",
@@ -7824,7 +7862,7 @@ RP.Emotes = {
         "Flex 2",
         AnimationOptions = {
             EmoteLoop = true,
-			EmoteMoving = true, --- Allows us to flex while performing another animation 
+			EmoteMoving = true, --- Allows us to flex while performing another animation
         }
     },
 	 ["gympose"] = { -- Custom Emote By Amnilka
@@ -7832,7 +7870,7 @@ RP.Emotes = {
         "pose_sport_001",
         "Gym Pose",
         AnimationOptions = {
-		
+
             EmoteLoop = true,
         }
    },
@@ -7841,7 +7879,7 @@ RP.Emotes = {
         "pose_sport_005",
         "Gym Pose 2 - One Handed Push Up",
         AnimationOptions = {
-		
+
             EmoteLoop = true
         }
     },
@@ -7850,7 +7888,7 @@ RP.Emotes = {
         "fem_pose_sport_004",
         "Gym Pose 3 - Planking Pose",
         AnimationOptions = {
-		
+
             EmoteLoop = true
         }
     },
@@ -7859,7 +7897,7 @@ RP.Emotes = {
         "fem_pose_sport_005",
         "Gym Pose 4 - Sit Ups Pose",
         AnimationOptions = {
-		
+
             EmoteLoop = true
         }
     },
@@ -8211,7 +8249,7 @@ RP.Emotes = {
             EmoteMoving = false
         }
     },
-	["laysexy"] = { -- Custom emote by Struggleville
+	["laydownsexy"] = { -- Custom emote by Struggleville
         "anim@female_laying_sexy",
         "laying_sexy_clip",
         "Laying Down Sexy",
@@ -8491,9 +8529,9 @@ RP.PropEmotes = {
         }
     },
     ["gift"] = { --- Custom Prop & Emote By BzZzi
-       "bz@give_love@anim", 
+       "bz@give_love@anim",
 	   "bz_give",
-	   "Gift", 
+	   "Gift",
         AnimationOptions = {
             Prop = 'bzzz_prop_gift_orange',
             PropBone = 57005,
@@ -8509,9 +8547,9 @@ RP.PropEmotes = {
         }
    },
     ["gift2"] = { --- Custom Prop & Emote By BzZzi
-       "bz@give_love@anim", 
+       "bz@give_love@anim",
 	   "bz_give",
-	   "Gift 2", 
+	   "Gift 2",
         AnimationOptions = {
             Prop = 'bzzz_prop_gift_purple',
             PropBone = 57005,
@@ -8527,9 +8565,63 @@ RP.PropEmotes = {
         }
     },
     ["cake"] = { --- Custom Prop & Emote By BzZzi
-       "anim@heists@box_carry@", 
+       "anim@heists@box_carry@",
 	   "idle",
-	   "Love Cake", 
+	   "Birthday Cake",
+        AnimationOptions = {
+            Prop = 'bzzz_prop_cake_birthday_001',
+            PropBone = 18905,
+            PropPlacement = {
+                0.33,
+				0.09,
+				0.2,
+			   -128.0,
+			   -245.0,
+			    2.0
+            },
+            EmoteMoving = true
+        }
+   },
+    ["cake2"] = { --- Custom Prop & Emote By BzZzi
+       "anim@heists@box_carry@",
+	   "idle",
+	   "Baby Cake",
+        AnimationOptions = {
+            Prop = 'bzzz_prop_cake_baby_001',
+            PropBone = 18905,
+            PropPlacement = {
+                0.33,
+				0.09,
+				0.2,
+			   -94.0,
+			   -162.0,
+			    -44.0
+            },
+            EmoteMoving = true
+        }
+    },
+    ["cake3"] = { --- Custom Prop & Emote By BzZzi
+       "anim@heists@box_carry@",
+	   "idle",
+	   "Casino Cake",
+        AnimationOptions = {
+            Prop = 'bzzz_prop_cake_casino001',
+            PropBone = 18905,
+            PropPlacement = {
+                0.33,
+				0.09,
+				0.2,
+			   -54.0,
+			   -72.0,
+			    -6.0
+            },
+            EmoteMoving = true
+        }
+   },
+   ["cake4"] = { --- Custom Prop & Emote By BzZzi
+       "anim@heists@box_carry@",
+	   "idle",
+	   "Love Cake",
         AnimationOptions = {
             Prop = 'bzzz_prop_cake_love_001',
             PropBone = 18905,
@@ -8544,6 +8636,82 @@ RP.PropEmotes = {
             EmoteMoving = true
         }
    },
+    ["cakew"] = {
+        "anim@move_f@waitress",
+        "idle",
+        "Cake Waiter - Birthday",
+        AnimationOptions = {
+            Prop = "bzzz_prop_cake_birthday_001",
+            PropBone = 28422,
+            PropPlacement = {
+                0.0,
+                0.0,
+                0.0100,
+                0.0,
+                0.0,
+                0.0
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["cakew2"] = { --- Custom Prop & Emote By BzZzi
+        "anim@move_f@waitress",
+        "idle",
+        "Cake Waiter - Baby",
+        AnimationOptions = {
+            Prop = "bzzz_prop_cake_baby_001",
+            PropBone = 28422,
+            PropPlacement = {
+                0.0,
+                0.0,
+                0.0100,
+                0.0,
+                0.0,
+                80.0
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["cakew3"] = { --- Custom Prop & Emote By BzZzi
+        "anim@move_f@waitress",
+        "idle",
+        "Cake Waiter - Casino",
+        AnimationOptions = {
+            Prop = "bzzz_prop_cake_casino001",
+            PropBone = 28422,
+            PropPlacement = {
+                0.0,
+                0.0,
+                0.0100,
+                0.0,
+                0.0,
+             -160.0
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+     },
+    ["cakew4"] = { --- Custom Prop & Emote By BzZzi
+        "anim@move_f@waitress",
+        "idle",
+        "Cake Waiter - Love",
+        AnimationOptions = {
+            Prop = "bzzz_prop_cake_love_001",
+            PropBone = 28422,
+            PropPlacement = {
+                0.0,
+                0.0,
+                0.0100,
+                0.0,
+                0.0,
+              180.0
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
     ["rose"] = {
         "anim@heists@humane_labs@finale@keycards",
         "ped_a_enter_loop",
@@ -8654,12 +8822,63 @@ RP.PropEmotes = {
             PtfxCanHold = true
         }
     },
+    ["vape2"] = {
+        "amb@world_human_smoking@male@male_b@base",
+        "base",
+         "Vape 2",
+        AnimationOptions = {
+            Prop = 'xm3_prop_xm3_vape_01a',
+            PropBone = 28422,
+            PropPlacement = {
+                -0.02,
+                -0.02,
+                0.02,
+                58.0,
+                110.0,
+                10.0
+            },
+            EmoteMoving = true,
+            EmoteLoop = true,
+            PtfxAsset = "core",
+            PtfxName = "exp_grd_bzgas_smoke",
+			PtfxNoProp = true,
+            PtfxPlacement = {
+                -0.0100,
+				0.0600,
+				0.6600,
+                0.0,
+                0.0,
+                0.0,
+                2.0
+            },
+            PtfxInfo = Config.Languages[Config.MenuLanguage]['vape'],
+            PtfxWait = 0,
+            PtfxCanHold = true
+        }
+    },
     ["bong"] = {
         "anim@safehouse@bong",
         "bong_stage3",
         "Bong",
         AnimationOptions = {
             Prop = 'hei_heist_sh_bong_01',
+            PropBone = 18905,
+            PropPlacement = {
+                0.10,
+                -0.25,
+                0.0,
+                95.0,
+                190.0,
+                180.0
+            }
+        }
+    },
+    ["bong2"] = {
+        "anim@safehouse@bong",
+        "bong_stage3",
+        "Bong 2",
+        AnimationOptions = {
+            Prop = 'xm3_prop_xm3_bong_01a',
             PropBone = 18905,
             PropPlacement = {
                 0.10,
@@ -8839,6 +9058,44 @@ RP.PropEmotes = {
         "Toolbox 2",
         AnimationOptions = {
             Prop = "imp_prop_tool_box_01a",
+            PropBone = 28422,
+            PropPlacement = {
+                0.3700,
+                0.0200,
+                0.0,
+                90.00,
+                0.0,
+                -90.00
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["toolbox3"] = {
+        "move_weapon@jerrycan@generic",
+        "idle",
+        "Toolbox 3",
+        AnimationOptions = {
+            Prop = "xm3_prop_xm3_tool_box_01a",
+            PropBone = 28422,
+            PropPlacement = {
+                0.3700,
+                0.0200,
+                0.0,
+                90.00,
+                0.0,
+                -90.00
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["toolbox4"] = {
+        "move_weapon@jerrycan@generic",
+        "idle",
+        "Toolbox 4",
+        AnimationOptions = {
+            Prop = "xm3_prop_xm3_tool_box_02a",
             PropBone = 28422,
             PropPlacement = {
                 0.3700,
@@ -11153,10 +11410,10 @@ RP.PropEmotes = {
                 {Name = "<font color=\"#1AA20E\">Green", Value = 1},
                 {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
                 {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
-                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4}, 
-                {Name = "<font color=\"#a356fa\">Purple", Value = 5}, 
-                {Name = "<font color=\"#FF0099\">Pink", Value = 6}, 
-                {Name = "Black", Value = 7}, 
+                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+                {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+                {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+                {Name = "Black", Value = 7},
             },
             PropBone = 28422,
             PropPlacement = {
@@ -11182,10 +11439,10 @@ RP.PropEmotes = {
                 {Name = "<font color=\"#1AA20E\">Green", Value = 1},
                 {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
                 {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
-                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4}, 
-                {Name = "<font color=\"#a356fa\">Purple", Value = 5}, 
-                {Name = "<font color=\"#FF0099\">Pink", Value = 6}, 
-                {Name = "Black", Value = 7}, 
+                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+                {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+                {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+                {Name = "Black", Value = 7},
             },
             PropBone = 28422,
             PropPlacement = {
@@ -11424,7 +11681,7 @@ RP.PropEmotes = {
         "pose_sport_003",
         "Weights 4 - Pose",
         AnimationOptions = {
-		Prop = 'prop_barbell_01', -- Left Wrist 
+		Prop = 'prop_barbell_01', -- Left Wrist
             PropBone = 60309,
             PropPlacement = {
                 0.0520,
@@ -11434,7 +11691,7 @@ RP.PropEmotes = {
                 70.2098,
 				74.5019
             },
-            SecondProp = 'prop_barbell_01', -- Right Wrist 
+            SecondProp = 'prop_barbell_01', -- Right Wrist
             SecondPropBone = 28422,
             SecondPropPlacement = {
                 0.0660,
@@ -11462,8 +11719,8 @@ RP.PropEmotes = {
                 170.2644,
 				7.8352
             },
-            SecondProp = 'v_res_tre_weight', 
-            SecondPropBone = 60309, -- Left Wrist 
+            SecondProp = 'v_res_tre_weight',
+            SecondPropBone = 60309, -- Left Wrist
             SecondPropPlacement = {
                 0.0880,
 				0.0000,
@@ -11490,8 +11747,8 @@ RP.PropEmotes = {
                 6.4814,
 				-13.9845
             },
-            SecondProp = 'v_res_tre_weight', 
-            SecondPropBone = 60309, -- Left Wrist 
+            SecondProp = 'v_res_tre_weight',
+            SecondPropBone = 60309, -- Left Wrist
             SecondPropPlacement = {
                 0.0550,
 				-0.0070,
@@ -13019,10 +13276,10 @@ RP.PropEmotes = {
                 {Name = "<font color=\"#1AA20E\">Green", Value = 1},
                 {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
                 {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
-                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4}, 
-                {Name = "<font color=\"#a356fa\">Purple", Value = 5}, 
-                {Name = "<font color=\"#FF0099\">Pink", Value = 6}, 
-                {Name = "Black", Value = 7}, 
+                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+                {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+                {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+                {Name = "Black", Value = 7},
             },
             PropBone = 60309,
             PropPlacement = {
@@ -13048,10 +13305,10 @@ RP.PropEmotes = {
                 {Name = "<font color=\"#1AA20E\">Green", Value = 1},
                 {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
                 {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
-                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4}, 
-                {Name = "<font color=\"#a356fa\">Purple", Value = 5}, 
-                {Name = "<font color=\"#FF0099\">Pink", Value = 6}, 
-                {Name = "Black", Value = 7}, 
+                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+                {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+                {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+                {Name = "Black", Value = 7},
             },
             PropBone = 28422,
             PropPlacement = {
@@ -13077,10 +13334,10 @@ RP.PropEmotes = {
                 {Name = "<font color=\"#1AA20E\">Green", Value = 1},
                 {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
                 {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
-                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4}, 
-                {Name = "<font color=\"#a356fa\">Purple", Value = 5}, 
-                {Name = "<font color=\"#FF0099\">Pink", Value = 6}, 
-                {Name = "Black", Value = 7}, 
+                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+                {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+                {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+                {Name = "Black", Value = 7},
             },
             PropBone = 28422,
             PropPlacement = {
@@ -13106,10 +13363,10 @@ RP.PropEmotes = {
                 {Name = "<font color=\"#1AA20E\">Green", Value = 1},
                 {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
                 {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
-                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4}, 
-                {Name = "<font color=\"#a356fa\">Purple", Value = 5}, 
-                {Name = "<font color=\"#FF0099\">Pink", Value = 6}, 
-                {Name = "Black", Value = 7}, 
+                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+                {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+                {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+                {Name = "Black", Value = 7},
             },
             PropBone = 28422,
             PropPlacement = {
@@ -13135,10 +13392,10 @@ RP.PropEmotes = {
                 {Name = "<font color=\"#1AA20E\">Green", Value = 1},
                 {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
                 {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
-                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4}, 
-                {Name = "<font color=\"#a356fa\">Purple", Value = 5}, 
-                {Name = "<font color=\"#FF0099\">Pink", Value = 6}, 
-                {Name = "Black", Value = 7}, 
+                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+                {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+                {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+                {Name = "Black", Value = 7},
             },
             PropBone = 28422,
             PropPlacement = {
@@ -13164,10 +13421,10 @@ RP.PropEmotes = {
                 {Name = "<font color=\"#1AA20E\">Green", Value = 1},
                 {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
                 {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
-                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4}, 
-                {Name = "<font color=\"#a356fa\">Purple", Value = 5}, 
-                {Name = "<font color=\"#FF0099\">Pink", Value = 6}, 
-                {Name = "Black", Value = 7}, 
+                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+                {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+                {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+                {Name = "Black", Value = 7},
             },
             PropBone = 28422,
             PropPlacement = {
@@ -13193,10 +13450,10 @@ RP.PropEmotes = {
                 {Name = "<font color=\"#1AA20E\">Green", Value = 1},
                 {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
                 {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
-                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4}, 
-                {Name = "<font color=\"#a356fa\">Purple", Value = 5}, 
-                {Name = "<font color=\"#FF0099\">Pink", Value = 6}, 
-                {Name = "Black", Value = 7}, 
+                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+                {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+                {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+                {Name = "Black", Value = 7},
             },
             PropBone = 28422,
             PropPlacement = {
@@ -13222,10 +13479,10 @@ RP.PropEmotes = {
                 {Name = "<font color=\"#1AA20E\">Green", Value = 1},
                 {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
                 {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
-                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4}, 
-                {Name = "<font color=\"#a356fa\">Purple", Value = 5}, 
-                {Name = "<font color=\"#FF0099\">Pink", Value = 6}, 
-                {Name = "Black", Value = 7}, 
+                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+                {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+                {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+                {Name = "Black", Value = 7},
             },
             PropBone = 57005,
             PropPlacement = {
@@ -13264,10 +13521,10 @@ RP.PropEmotes = {
                 {Name = "<font color=\"#1AA20E\">Green", Value = 1},
                 {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
                 {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
-                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4}, 
-                {Name = "<font color=\"#a356fa\">Purple", Value = 5}, 
-                {Name = "<font color=\"#FF0099\">Pink", Value = 6}, 
-                {Name = "Black", Value = 7}, 
+                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+                {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+                {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+                {Name = "Black", Value = 7},
             },
             PropBone = 18905,
             PropPlacement = {
@@ -13306,10 +13563,10 @@ RP.PropEmotes = {
                 {Name = "<font color=\"#1AA20E\">Green", Value = 1},
                 {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
                 {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
-                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4}, 
-                {Name = "<font color=\"#a356fa\">Purple", Value = 5}, 
-                {Name = "<font color=\"#FF0099\">Pink", Value = 6}, 
-                {Name = "Black", Value = 7}, 
+                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+                {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+                {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+                {Name = "Black", Value = 7},
             },
             PropBone = 60309,
             PropPlacement = {
@@ -13348,10 +13605,10 @@ RP.PropEmotes = {
                 {Name = "<font color=\"#1AA20E\">Green", Value = 1},
                 {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
                 {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
-                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4}, 
-                {Name = "<font color=\"#a356fa\">Purple", Value = 5}, 
-                {Name = "<font color=\"#FF0099\">Pink", Value = 6}, 
-                {Name = "Black", Value = 7}, 
+                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+                {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+                {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+                {Name = "Black", Value = 7},
             },
             PropBone = 60309,
             PropPlacement = {
@@ -13390,10 +13647,10 @@ RP.PropEmotes = {
                 {Name = "<font color=\"#1AA20E\">Green", Value = 1},
                 {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
                 {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
-                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4}, 
-                {Name = "<font color=\"#a356fa\">Purple", Value = 5}, 
-                {Name = "<font color=\"#FF0099\">Pink", Value = 6}, 
-                {Name = "Black", Value = 7}, 
+                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+                {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+                {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+                {Name = "Black", Value = 7},
             },
             PropBone = 18905,
             PropPlacement = {
@@ -13432,10 +13689,10 @@ RP.PropEmotes = {
                 {Name = "<font color=\"#1AA20E\">Green", Value = 1},
                 {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
                 {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
-                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4}, 
-                {Name = "<font color=\"#a356fa\">Purple", Value = 5}, 
-                {Name = "<font color=\"#FF0099\">Pink", Value = 6}, 
-                {Name = "Black", Value = 7}, 
+                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+                {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+                {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+                {Name = "Black", Value = 7},
             },
             PropBone = 26613, -- Left Finger 30
             PropPlacement = {
@@ -13463,7 +13720,7 @@ RP.PropEmotes = {
             PtfxWait = 200
         }
     },
-    ["selfieslut"] = { -- Custom Emote By Struggleville 
+    ["selfieslut"] = { -- Custom Emote By Struggleville
         "anim@female_floor_slutarch_selfie",
         "slutarch_selfie_clip",
         "Selfie Slut Pose",
@@ -13474,10 +13731,10 @@ RP.PropEmotes = {
                 {Name = "<font color=\"#1AA20E\">Green", Value = 1},
                 {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
                 {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
-                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4}, 
-                {Name = "<font color=\"#a356fa\">Purple", Value = 5}, 
-                {Name = "<font color=\"#FF0099\">Pink", Value = 6}, 
-                {Name = "Black", Value = 7}, 
+                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+                {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+                {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+                {Name = "Black", Value = 7},
             },
             PropBone = 58868, -- Right Finger 20
             PropPlacement = {
@@ -13507,7 +13764,7 @@ RP.PropEmotes = {
         },
         AdultAnimation = true
     },
-    ["selfiesit"] = { -- Emote by WhiskerValeMod. Need to configure camera flash and texture variants 
+    ["selfiesit"] = { -- Emote by WhiskerValeMod. Need to configure camera flash and texture variants
         "mouse@female_sitting_selfie",
         "female_sitting_selfie_clip",
         "Selfie Sitting",
@@ -13547,10 +13804,10 @@ RP.PropEmotes = {
                 {Name = "<font color=\"#1AA20E\">Green", Value = 1},
                 {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
                 {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
-                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4}, 
-                {Name = "<font color=\"#a356fa\">Purple", Value = 5}, 
-                {Name = "<font color=\"#FF0099\">Pink", Value = 6}, 
-                {Name = "Black", Value = 7}, 
+                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+                {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+                {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+                {Name = "Black", Value = 7},
             },
             PropBone = 4090, -- Left Finger 2
             PropPlacement = {
@@ -13589,10 +13846,10 @@ RP.PropEmotes = {
                 {Name = "<font color=\"#1AA20E\">Green", Value = 1},
                 {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
                 {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
-                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4}, 
-                {Name = "<font color=\"#a356fa\">Purple", Value = 5}, 
-                {Name = "<font color=\"#FF0099\">Pink", Value = 6}, 
-                {Name = "Black", Value = 7}, 
+                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+                {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+                {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+                {Name = "Black", Value = 7},
             },
             PropBone = 28422,
             PropPlacement = {
@@ -13631,10 +13888,10 @@ RP.PropEmotes = {
                 {Name = "<font color=\"#1AA20E\">Green", Value = 1},
                 {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
                 {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
-                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4}, 
-                {Name = "<font color=\"#a356fa\">Purple", Value = 5}, 
-                {Name = "<font color=\"#FF0099\">Pink", Value = 6}, 
-                {Name = "Black", Value = 7}, 
+                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+                {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+                {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+                {Name = "Black", Value = 7},
             },
             PropBone = 28422,
             PropPlacement = {
@@ -13673,10 +13930,10 @@ RP.PropEmotes = {
                 {Name = "<font color=\"#1AA20E\">Green", Value = 1},
                 {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
                 {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
-                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4}, 
-                {Name = "<font color=\"#a356fa\">Purple", Value = 5}, 
-                {Name = "<font color=\"#FF0099\">Pink", Value = 6}, 
-                {Name = "Black", Value = 7}, 
+                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+                {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+                {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+                {Name = "Black", Value = 7},
             },
             PropBone = 60309,
             PropPlacement = {
@@ -13715,12 +13972,12 @@ RP.PropEmotes = {
                 {Name = "<font color=\"#1AA20E\">Green", Value = 1},
                 {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
                 {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
-                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4}, 
-                {Name = "<font color=\"#a356fa\">Purple", Value = 5}, 
-                {Name = "<font color=\"#FF0099\">Pink", Value = 6}, 
-                {Name = "Black", Value = 7}, 
+                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+                {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+                {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+                {Name = "Black", Value = 7},
             },
-            PropBone = 58870, -- Right Finger 40 Bone 
+            PropBone = 58870, -- Right Finger 40 Bone
             PropPlacement = {
                 0.0150,
                 0.0230,
@@ -13757,12 +14014,12 @@ RP.PropEmotes = {
                 {Name = "<font color=\"#1AA20E\">Green", Value = 1},
                 {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
                 {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
-                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4}, 
-                {Name = "<font color=\"#a356fa\">Purple", Value = 5}, 
-                {Name = "<font color=\"#FF0099\">Pink", Value = 6}, 
-                {Name = "Black", Value = 7}, 
+                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+                {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+                {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+                {Name = "Black", Value = 7},
             },
-            PropBone = 64064, -- Right Finger 31 Bone 
+            PropBone = 64064, -- Right Finger 31 Bone
             PropPlacement = {
                 0.0290,
                 0.0140,
@@ -13799,12 +14056,12 @@ RP.PropEmotes = {
                 {Name = "<font color=\"#1AA20E\">Green", Value = 1},
                 {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
                 {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
-                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4}, 
-                {Name = "<font color=\"#a356fa\">Purple", Value = 5}, 
-                {Name = "<font color=\"#FF0099\">Pink", Value = 6}, 
-                {Name = "Black", Value = 7}, 
+                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+                {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+                {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+                {Name = "Black", Value = 7},
             },
-            PropBone = 64064, -- Right Finger 31 Bone 
+            PropBone = 64064, -- Right Finger 31 Bone
             PropPlacement = {
                 0.0290,
                 0.0140,
@@ -13841,12 +14098,12 @@ RP.PropEmotes = {
                 {Name = "<font color=\"#1AA20E\">Green", Value = 1},
                 {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
                 {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
-                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4}, 
-                {Name = "<font color=\"#a356fa\">Purple", Value = 5}, 
-                {Name = "<font color=\"#FF0099\">Pink", Value = 6}, 
-                {Name = "Black", Value = 7}, 
+                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+                {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+                {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+                {Name = "Black", Value = 7},
             },
-            PropBone = 64064, -- Right Finger 31 Bone 
+            PropBone = 64064, -- Right Finger 31 Bone
             PropPlacement = {
                 0.0290,
                 0.0140,
@@ -13883,12 +14140,12 @@ RP.PropEmotes = {
                 {Name = "<font color=\"#1AA20E\">Green", Value = 1},
                 {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
                 {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
-                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4}, 
-                {Name = "<font color=\"#a356fa\">Purple", Value = 5}, 
-                {Name = "<font color=\"#FF0099\">Pink", Value = 6}, 
-                {Name = "Black", Value = 7}, 
+                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+                {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+                {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+                {Name = "Black", Value = 7},
             },
-            PropBone = 64064, -- Right Finger 31 Bone 
+            PropBone = 64064, -- Right Finger 31 Bone
             PropPlacement = {
                 0.0290,
                 0.0140,
@@ -13925,12 +14182,12 @@ RP.PropEmotes = {
                 {Name = "<font color=\"#1AA20E\">Green", Value = 1},
                 {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
                 {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
-                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4}, 
-                {Name = "<font color=\"#a356fa\">Purple", Value = 5}, 
-                {Name = "<font color=\"#FF0099\">Pink", Value = 6}, 
-                {Name = "Black", Value = 7}, 
+                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+                {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+                {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+                {Name = "Black", Value = 7},
             },
-            PropBone = 26613, -- Left Finger 30 Bone 
+            PropBone = 26613, -- Left Finger 30 Bone
             PropPlacement = {
                 0.0380,
                 -0.0310,
@@ -13967,10 +14224,10 @@ RP.PropEmotes = {
                 {Name = "<font color=\"#1AA20E\">Green", Value = 1},
                 {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
                 {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
-                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4}, 
-                {Name = "<font color=\"#a356fa\">Purple", Value = 5}, 
-                {Name = "<font color=\"#FF0099\">Pink", Value = 6}, 
-                {Name = "Black", Value = 7}, 
+                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+                {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+                {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+                {Name = "Black", Value = 7},
             },
             PropBone = 60309, -- Left Wrist, worked better.
             PropPlacement = {
@@ -14009,10 +14266,10 @@ RP.PropEmotes = {
                 {Name = "<font color=\"#1AA20E\">Green", Value = 1},
                 {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
                 {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
-                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4}, 
-                {Name = "<font color=\"#a356fa\">Purple", Value = 5}, 
-                {Name = "<font color=\"#FF0099\">Pink", Value = 6}, 
-                {Name = "Black", Value = 7}, 
+                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+                {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+                {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+                {Name = "Black", Value = 7},
             },
             PropBone = 26614, -- Left Finger 40, worked better.
             PropPlacement = {
@@ -14051,10 +14308,10 @@ RP.PropEmotes = {
                 {Name = "<font color=\"#1AA20E\">Green", Value = 1},
                 {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
                 {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
-                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4}, 
-                {Name = "<font color=\"#a356fa\">Purple", Value = 5}, 
-                {Name = "<font color=\"#FF0099\">Pink", Value = 6}, 
-                {Name = "Black", Value = 7}, 
+                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+                {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+                {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+                {Name = "Black", Value = 7},
             },
             PropBone = 4185, -- Left Finger 21
             PropPlacement = {
@@ -14093,10 +14350,10 @@ RP.PropEmotes = {
                 {Name = "<font color=\"#1AA20E\">Green", Value = 1},
                 {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
                 {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
-                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4}, 
-                {Name = "<font color=\"#a356fa\">Purple", Value = 5}, 
-                {Name = "<font color=\"#FF0099\">Pink", Value = 6}, 
-                {Name = "Black", Value = 7}, 
+                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+                {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+                {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+                {Name = "Black", Value = 7},
             },
             PropBone = 4185,
             PropPlacement = {
@@ -14135,10 +14392,10 @@ RP.PropEmotes = {
                 {Name = "<font color=\"#1AA20E\">Green", Value = 1},
                 {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
                 {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
-                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4}, 
-                {Name = "<font color=\"#a356fa\">Purple", Value = 5}, 
-                {Name = "<font color=\"#FF0099\">Pink", Value = 6}, 
-                {Name = "Black", Value = 7}, 
+                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+                {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+                {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+                {Name = "Black", Value = 7},
             },
             PropBone = 26613, -- Left Finger 30
             PropPlacement = {
@@ -14172,7 +14429,7 @@ RP.PropEmotes = {
         'Selfie Hand Bag',
         AnimationOptions = {
             Prop = 'prop_amb_handbag_01',
-            PropBone = 28422, -- Right Wrist 
+            PropBone = 28422, -- Right Wrist
             PropPlacement = {
                 0.1700,
                 0.0020,
@@ -14187,10 +14444,10 @@ RP.PropEmotes = {
                 {Name = "<font color=\"#1AA20E\">Green", Value = 1},
                 {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
                 {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
-                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4}, 
-                {Name = "<font color=\"#a356fa\">Purple", Value = 5}, 
-                {Name = "<font color=\"#FF0099\">Pink", Value = 6}, 
-                {Name = "Black", Value = 7}, 
+                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+                {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+                {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+                {Name = "Black", Value = 7},
             },
             SecondPropBone = 4185,
             SecondPropPlacement = {
@@ -14229,10 +14486,10 @@ RP.PropEmotes = {
                 {Name = "<font color=\"#1AA20E\">Green", Value = 1},
                 {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
                 {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
-                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4}, 
-                {Name = "<font color=\"#a356fa\">Purple", Value = 5}, 
-                {Name = "<font color=\"#FF0099\">Pink", Value = 6}, 
-                {Name = "Black", Value = 7}, 
+                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+                {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+                {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+                {Name = "Black", Value = 7},
             },
             PropBone = 64096, -- Right Finger 11
             PropPlacement = {
@@ -14271,10 +14528,10 @@ RP.PropEmotes = {
                 {Name = "<font color=\"#1AA20E\">Green", Value = 1},
                 {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
                 {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
-                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4}, 
-                {Name = "<font color=\"#a356fa\">Purple", Value = 5}, 
-                {Name = "<font color=\"#FF0099\">Pink", Value = 6}, 
-                {Name = "Black", Value = 7}, 
+                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+                {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+                {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+                {Name = "Black", Value = 7},
             },
             PropBone = 64097, -- Right Finger 12
             PropPlacement = {
@@ -14325,10 +14582,10 @@ RP.PropEmotes = {
                 {Name = "<font color=\"#1AA20E\">Green", Value = 1},
                 {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
                 {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
-                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4}, 
-                {Name = "<font color=\"#a356fa\">Purple", Value = 5}, 
-                {Name = "<font color=\"#FF0099\">Pink", Value = 6}, 
-                {Name = "Black", Value = 7}, 
+                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+                {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+                {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+                {Name = "Black", Value = 7},
             },
             SecondPropBone = 26613, -- Left Finger 30
             SecondPropPlacement = {
@@ -14369,10 +14626,10 @@ RP.PropEmotes = {
                 {Name = "<font color=\"#1AA20E\">Green", Value = 1},
                 {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
                 {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
-                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4}, 
-                {Name = "<font color=\"#a356fa\">Purple", Value = 5}, 
-                {Name = "<font color=\"#FF0099\">Pink", Value = 6}, 
-                {Name = "Black", Value = 7}, 
+                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+                {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+                {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+                {Name = "Black", Value = 7},
             },
             PropBone = 60309,
             PropPlacement = {
@@ -14799,7 +15056,7 @@ RP.PropEmotes = {
         "Gucci Bag",
         AnimationOptions = {
             Prop = 'prop_amb_handbag_01',
-            PropBone = 28422, -- Right Wrist 
+            PropBone = 28422, -- Right Wrist
             PropPlacement = {
                 0.2000,
                 0.0300,
@@ -14975,10 +15232,10 @@ RP.PropEmotes = {
                 {Name = "<font color=\"#1AA20E\">Green", Value = 1},
                 {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
                 {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
-                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4}, 
-                {Name = "<font color=\"#a356fa\">Purple", Value = 5}, 
-                {Name = "<font color=\"#FF0099\">Pink", Value = 6}, 
-                {Name = "Black", Value = 7}, 
+                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+                {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+                {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+                {Name = "Black", Value = 7},
             },
             PropBone = 28422,
             PropPlacement = {
@@ -15004,10 +15261,10 @@ RP.PropEmotes = {
                 {Name = "<font color=\"#1AA20E\">Green", Value = 1},
                 {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
                 {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
-                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4}, 
-                {Name = "<font color=\"#a356fa\">Purple", Value = 5}, 
-                {Name = "<font color=\"#FF0099\">Pink", Value = 6}, 
-                {Name = "Black", Value = 7}, 
+                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+                {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+                {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+                {Name = "Black", Value = 7},
             },
             PropBone = 28422,
             PropPlacement = {
@@ -15033,10 +15290,10 @@ RP.PropEmotes = {
                 {Name = "<font color=\"#1AA20E\">Green", Value = 1},
                 {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
                 {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
-                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4}, 
-                {Name = "<font color=\"#a356fa\">Purple", Value = 5}, 
-                {Name = "<font color=\"#FF0099\">Pink", Value = 6}, 
-                {Name = "Black", Value = 7}, 
+                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+                {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+                {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+                {Name = "Black", Value = 7},
             },
             PropBone = 28422,
             PropPlacement = {
@@ -15062,10 +15319,10 @@ RP.PropEmotes = {
                 {Name = "<font color=\"#1AA20E\">Green", Value = 1},
                 {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
                 {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
-                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4}, 
-                {Name = "<font color=\"#a356fa\">Purple", Value = 5}, 
-                {Name = "<font color=\"#FF0099\">Pink", Value = 6}, 
-                {Name = "Black", Value = 7}, 
+                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+                {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+                {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+                {Name = "Black", Value = 7},
             },
             PropBone = 28422,
             PropPlacement = {
@@ -15091,10 +15348,10 @@ RP.PropEmotes = {
                 {Name = "<font color=\"#1AA20E\">Green", Value = 1},
                 {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
                 {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
-                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4}, 
-                {Name = "<font color=\"#a356fa\">Purple", Value = 5}, 
-                {Name = "<font color=\"#FF0099\">Pink", Value = 6}, 
-                {Name = "Black", Value = 7}, 
+                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+                {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+                {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+                {Name = "Black", Value = 7},
             },
             PropBone = 28422,
             PropPlacement = {
@@ -15133,10 +15390,10 @@ RP.PropEmotes = {
                 {Name = "<font color=\"#1AA20E\">Green", Value = 1},
                 {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
                 {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
-                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4}, 
-                {Name = "<font color=\"#a356fa\">Purple", Value = 5}, 
-                {Name = "<font color=\"#FF0099\">Pink", Value = 6}, 
-                {Name = "Black", Value = 7}, 
+                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+                {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+                {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+                {Name = "Black", Value = 7},
             },
             PropBone = 28422,
             PropPlacement = {
@@ -15956,10 +16213,10 @@ RP.PropEmotes = {
                 {Name = "<font color=\"#1AA20E\">Green", Value = 1},
                 {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
                 {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
-                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4}, 
-                {Name = "<font color=\"#a356fa\">Purple", Value = 5}, 
-                {Name = "<font color=\"#FF0099\">Pink", Value = 6}, 
-                {Name = "Black", Value = 7}, 
+                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+                {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+                {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+                {Name = "Black", Value = 7},
             },
             PropBone = 28422,
             PropPlacement = {
@@ -16279,7 +16536,7 @@ RP.PropEmotes = {
             EmoteMoving = true,
         }
    },
-    ["bball4"] = { -- Custom Emote By SapphireMods 
+    ["bball4"] = { -- Custom Emote By SapphireMods
         "mx@pose2",
         "mx_clippose2",
         "Basketball Hold 3",
@@ -16356,22 +16613,23 @@ RP.PropEmotes = {
         AdultAnimation = true
     },
     ["candyapple"] = { -- Custom Prop by hollywoodiownu
-        "anim@heists@humane_labs@finale@keycards", 
-        "ped_a_enter_loop", 
-        "Candy Apple", 
+        "anim@heists@humane_labs@finale@keycards",
+        "ped_a_enter_loop",
+        "Candy Apple",
         AnimationOptions = {
-    Prop = "apple_1",
-    PropBone = 18905,
-    PropPlacement = {
-        0.12, 
-        0.15,
-         0.0, 
-         -100.0, 
-         0.0, 
-         -12.0},
-    EmoteLoop = true,
-    EmoteMoving = true,
+            Prop = "apple_1",
+            PropBone = 18905,
+            PropPlacement = {
+                0.12,
+                0.15,
+                0.0,
+                -100.0,
+                0.0,
+                -12.0
             },
+            EmoteLoop = true,
+            EmoteMoving = true,
+        },
     },
     ["gamer"] = { --- Custom Emote By MissSnowie
         "playing@with_controller",
@@ -16396,8 +16654,8 @@ RP.PropEmotes = {
         "base",
         "Crack Head",
         AnimationOptions = {
-            Prop = 'prop_cs_bowie_knife', -- Knife 
-            PropBone = 28422, -- Right Wrist 
+            Prop = 'prop_cs_bowie_knife', -- Knife
+            PropBone = 28422, -- Right Wrist
             PropPlacement = {
                 -0.1280,
                 -0.0220,
@@ -16489,5 +16747,202 @@ RP.PropEmotes = {
             EmoteLoop = true
         }
     },
-
+	["patrolf1"] = {
+        "amb@world_human_security_shine_torch@male@base",
+        "base",
+        "Patrol - On Foot",
+        AnimationOptions = {
+            Prop = 'prop_cs_police_torch_02',
+            PropBone = 60309,
+            PropPlacement = {
+               0.0,
+               0.0,
+               0.0,
+               0.0,
+               0.0,
+               80.0000
+            },
+            EmoteLoop = true,
+			EmoteMoving = true
+        }
+    },
+    ["patrolf2"] = {
+        "amb@world_human_security_shine_torch@male@idle_b",
+        "idle_e",
+        "Patrol - On Foot 2",
+        AnimationOptions = {
+            Prop = 'prop_cs_police_torch_02',
+            PropBone = 60309,
+            PropPlacement = {
+               0.0,
+               0.0,
+               0.0,
+               0.0,
+               0.0,
+               80.0000
+            },
+            EmoteLoop = true,
+			EmoteMoving = true
+        }
+    },
+    ["patrolf3"] = {
+        "amb@world_human_security_shine_torch@male@idle_a",
+        "idle_a",
+        "Patrol - On Foot 3",
+        AnimationOptions = {
+            Prop = 'prop_cs_police_torch_02',
+            PropBone = 60309,
+            PropPlacement = {
+               0.0,
+               0.0,
+               0.0,
+               0.0,
+               0.0,
+               80.0000
+            },
+            EmoteLoop = true,
+			EmoteMoving = true
+        }
+    },
+    ["patrolf4"] = { -- Huge thanks to MadsLeander on GitHub
+        "amb@incar@male@patrol@torch@base",
+        "base",
+        "Patrol - On Foot 4 Over The Shoulder",
+        AnimationOptions = {
+            Prop = 'prop_cs_police_torch_02',
+            PropBone = 28422, -- Right Wrist
+            PropPlacement = {
+                0.0,
+               -0.00100,
+                0.0,
+                0.0,
+				0.0,
+                90.0
+            },
+            SecondProp = 'prop_cs_hand_radio',
+            SecondPropBone = 60309, -- Left Wrist
+            SecondPropPlacement = {
+                0.0560,
+                0.0470,
+                0.0110,
+              -43.82733,
+              164.6747,
+			   -7.5569
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["patrolcar"] = {
+        "amb@incar@male@patrol@torch@base",
+        "base",
+        "Patrol Car - Front",
+        AnimationOptions = {
+            Prop = 'prop_cs_police_torch_02',
+            PropBone = 28422,
+            PropPlacement = {
+               0.0,
+              -0.0100,
+              -0.0100,
+               0.0,
+               0.0,
+             100.0000
+            },
+            EmoteLoop = true
+        }
+    },
+    ["pineapple"] = { -- Custom Prop by hollywoodiownu
+        "anim@heists@humane_labs@finale@keycards",
+        "ped_a_enter_loop",
+        "Pineapple",
+        AnimationOptions = {
+            Prop = "xm3_prop_xm3_pineapple_01a",
+            PropBone = 18905,
+            PropPlacement = {
+                0.1,
+                -0.11,
+                0.05,
+                -100.0,
+                0.0,
+                0.0
+            },
+            EmoteLoop = true,
+            EmoteMoving = true,
+        },
+    },
+    ["present"] = {
+        "anim@heists@box_carry@",
+        "idle",
+        "Present",
+        AnimationOptions = {
+            Prop = "xm3_prop_xm3_present_01a",
+            PropBone = 28422,
+            PropPlacement = {
+                0.0,
+                -0.18,
+                -0.16,
+                0.0,
+                0.0,
+                0.0
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["patrolcarl"] = {
+        "amb@incar@male@patrol@torch@idle_b",
+        "idle_d",
+        "Patrol Car - Left",
+        AnimationOptions = {
+            Prop = 'prop_cs_police_torch_02',
+            PropBone = 28422,
+            PropPlacement = {
+               0.0,
+              -0.0100,
+              -0.0100,
+               0.0,
+               0.0,
+             100.0000
+            },
+            EmoteLoop = true
+        }
+    },
+    ["patrolcarr"] = {
+        "amb@incar@male@patrol@torch@idle_a",
+        "idle_a",
+        "Patrol Car - Right",
+        AnimationOptions = {
+            Prop = 'prop_cs_police_torch_02',
+            PropBone = 28422,
+            PropPlacement = {
+               0.0,
+              -0.0100,
+              -0.0100,
+               0.0,
+               0.0,
+             100.0000
+            },
+            EmoteLoop = true
+        }
+    },
+    ["papers"] = {
+        "missheistdocksprep1hold_cellphone",
+        "static",
+        "Papers",
+        AnimationOptions =
+        {
+            Prop = "xm3_prop_xm3_papers_01a",
+            PropBone = 18905,
+            PropPlacement = {
+                0.13,
+                0.0,
+                0.04,
+                -110.0,
+                0.0,
+                0.0
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
 }
