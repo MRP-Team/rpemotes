@@ -70,6 +70,8 @@ Languages can be selected and / or added in the config.lua.
 
 # Features 🛠️
 
+- Multiple Translations 🌏
+
 - Search Function 🔎
 
 - Custom Animations with **permission from the community** 🏃
@@ -95,6 +97,8 @@ Languages can be selected and / or added in the config.lua.
 - Hide Animal Emotes ⛔
 
 - Easy To Understand Configuration File ⚙️
+
+- Exit Emotes 😎
 
 - Standalone exports to play anim, cancel anim and block (or not) the cancel key
 
@@ -154,6 +158,52 @@ Much like the menu key, `RagdollKeybind` is also using RegisterKeyMapping. It is
 Once enabled, players can press `B` on the keyboard to enable standalone finger pointing, and `H` to put their hands up, without the need for unnecessary frameworks or "small resources".
 
 Much like everything else in the menu, server owners can change these keybinds to their own preferences.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Favorite Emote
+
+Players can search for an emote (so long as search is enabled) and press LEFT SHIFT and CAPLOCKS on their keyboard to add it to their 'Favorites'. Pressing CAPLOCKS will toggle the emote.
+
+Alternatively, you can use the 🌟 Favorite menu to find an emote and press enter.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Exit Emotes
+
+Exit Emotes are used to make cancelling an animation more smoother and dynamic, such as getting up off a chair or throwing a cigarette out instead of dropping it.
+
+You can add your own Exit Emotes under `AnimationListCustom.lua`'s new `CustomDP.Exits = {}` array. 
+
+Below is an example of how this would look:
+
+```lua
+    },
+    ["sit"] = {
+        "anim@amb@business@bgen@bgen_no_work@",
+        "sit_phone_phoneputdown_idle_nowork",
+        "Sit",
+        AnimationOptions = {
+            EmoteLoop = true,
+            ExitEmote = "getup",
+            ExitEmoteType = "Exits"
+        }
+    },
+```
+
+The ExitEmote calls for the 'getup' emote, which is noted as the following:
+
+```lua
+["getup"] = {
+        "get_up@sat_on_floor@to_stand",
+        "getup_0",
+        "Get Up",
+        AnimationOptions = {
+            EmoteDuration = 2000
+        }
+    }
+}
+```
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -282,9 +332,11 @@ PtfxPlacement = {
 
 By default, the main prop will share it's coordinates with the particle effect, so just put 0.0 for the particle effects and you will be good to go.
 
-If no prop is uses in the animation or you require the particle effect to be in a different location, use `PtfxNoProp = true`, and 0.0 will 9/10 times be the human peds' stomach; you can then offset your coordinates based on that with the first 3 entries being XYZ, and the last 3 being rotation XYZ. 
+If no prop is used in the animation or you require the particle effect to be in a different location, use `PtfxNoProp = true`, and 0.0 will 9/10 times be the human peds' stomach; you can then offset your coordinates based on that with the first 3 entries being XYZ, and the last 3 being rotation XYZ.
 
-Using Menyoo, spawn down a tennis ball and attach it to human, by default menyoo will attach it to the SKEL_ROOT bone (stomach), so from that, what we can do is offset the coordinates, say, up to the human ped's mouth, and then once we've got it correct, we can transfer those coordinates over to rpemotes, and tah dah, we have our Ptfx Placement.
+Alternatively, you can use the `PtfxBone =` AnimationOption to attach the PTFX to the ped's bone, simiarly to how you attach props.
+
+Using Menyoo, spawn down a tennis ball and attach it to human, by default menyoo will attach it to the SKEL_ROOT bone (stomach), so from that, what we can do is is either offset the coordinates, say, up to the human ped's mouth, or change the bone all together. Once we've got it correct, we can transfer those coordinates over to rpemotes, and tah dah, we have our Ptfx Placement.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -393,10 +445,12 @@ A huge thank  you to the following people for their amazing contributions made t
 
 - Thanks to [EnchantedBrownie](https://www.gta5-mods.com/users/EnchantedBrownie) for the custom animations
 
+- Thanks to [Copofiscool](https://forum.cfx.re/u/copofiscool/) for adding a toggle to the Favorite Keybinds
+
+- Thank you to [Mads](https://github.com/MadsLeander) for contributing to the menu and adding Exit Emotes
+
 - Thank you to you, the community for being patient, showing love and appreciation, and for providing translations.
 
 You pay a big role in making this script what it is today and we could not do it without you 🙏
 
 -------------------------------------------------------------------------------
-
-<img src="stream/[Custom Emotes]/CMGMods/Permission_CMG_Mods.png" width="480"> <img src="stream/[Custom Emotes]/Prue颜/Permission_Lunyxmods.png" width="480">

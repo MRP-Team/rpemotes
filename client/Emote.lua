@@ -2,6 +2,7 @@
 local AnimationDuration = -1
 local ChosenAnimation = ""
 local ChosenDict = ""
+local ChosenAnimOptions = false
 local IsInAnimation = false
 local MostRecentChosenAnimation = ""
 local MostRecentChosenDict = ""
@@ -37,7 +38,7 @@ for i = 1, #emoteTypes do
     for emoteName, emoteData in pairs(RP[emoteType]) do
         local shouldRemove = false
         if Config.AdultEmotesDisabled and emoteData.AdultAnimation then shouldRemove = true end
-        if not Config.AnimalEmotesEnabled and emoteData.AnimalEmote then shouldRemove = true end
+        if not Config.AnimalEmotesEnabled and emoteData.AnimalEmote then shouldRemove = true RP.AnimalEmotes = {} end
         if emoteData[1] and not ((emoteData[1] == 'Scenario') or (emoteData[1] == 'ScenarioObject') or (emoteData[1] == 'MaleScenario')) and not DoesAnimDictExist(emoteData[1]) then shouldRemove = true end
         if shouldRemove then RP[emoteType][emoteName] = nil end
     end
@@ -114,7 +115,7 @@ Citizen.CreateThread(function()
                 { name = "emotename", help = "dance, camera, sit or any valid emote." } })
         TriggerEvent('chat:addSuggestion', '/emotebinds', 'Check your currently bound emotes.')
     end
-    TriggerEvent('chat:addSuggestion', '/emotemenu', 'Open rpemotes menu (F5) by default.')
+    TriggerEvent('chat:addSuggestion', '/emotemenu', 'Open rpemotes menu (F4) by default. This may differ from server to server.')
     TriggerEvent('chat:addSuggestion', '/emotes', 'List available emotes.')
     TriggerEvent('chat:addSuggestion', '/walk', 'Set your walkingstyle.',
         { { name = "style", help = "/walks for a list of valid styles" } })
@@ -122,6 +123,7 @@ Citizen.CreateThread(function()
     TriggerEvent('chat:addSuggestion', '/emotecancel', 'Cancel currently playing emote.')
     TriggerEvent('chat:addSuggestion', '/handsup', 'Put your arms up.')
     TriggerEvent('chat:addSuggestion', '/pointing', 'Finger pointing.')
+    TriggerEvent('chat:addSuggestion', '/crouch', 'Crouch')
 end)
 
 RegisterCommand('e', function(source, args, raw) EmoteCommandStart(source, args, raw) end, false)
@@ -248,11 +250,28 @@ function EmoteCancel(force)
         if LocalPlayer.state.ptfx then
             PtfxStop()
         end
-        ClearPedTasks(ply)
         DetachEntity(ply, true, false)
         CancelSharedEmote(ply)
         DestroyAllProps()
-        IsInAnimation = false
+
+        if ChosenAnimOptions and ChosenAnimOptions.ExitEmote then
+            -- If the emote exit type is not spesifed it defaults to Emotes
+            local ExitEmoteType = ChosenAnimOptions.ExitEmoteType or "Emotes"
+
+            -- Checks that the exit emote actually exists
+            if not RP[ExitEmoteType] or not RP[ExitEmoteType][ChosenAnimOptions.ExitEmote] then
+                DebugPrint("Exit emote was invalid")
+                ClearPedTasks(ply)
+                IsInAnimation = false
+                return
+            end
+
+            OnEmotePlay(RP[ExitEmoteType][ChosenAnimOptions.ExitEmote])
+            DebugPrint("Playing exit animation")
+        else
+            ClearPedTasks(ply)
+            IsInAnimation = false
+        end
     end
     AnimationThreadStatus = false
 end
@@ -308,6 +327,7 @@ AddStateBagChangeHandler('ptfx', nil, function(bagName, key, value, _unused, rep
         local name = stateBag.ptfxName
         local offset = stateBag.ptfxOffset
         local rot = stateBag.ptfxRot
+        local boneIndex = stateBag.ptfxBone and GetPedBoneIndex(plyPed, stateBag.ptfxBone) or GetEntityBoneIndexByName(name, "VFX")
         local scale = stateBag.ptfxScale or 1
         local color = stateBag.ptfxColor
         local propNet = stateBag.ptfxPropNet
@@ -320,7 +340,7 @@ AddStateBagChangeHandler('ptfx', nil, function(bagName, key, value, _unused, rep
             end
         end
         PtfxThis(asset)
-        PlayerParticles[plyId] = StartNetworkedParticleFxLoopedOnEntityBone(name, entityTarget, offset.x, offset.y, offset.z, rot.x, rot.y, rot.z, GetEntityBoneIndexByName(name, "VFX"), scale + 0.0, 0, 0, 0, 1065353216, 1065353216, 1065353216, 0)
+        PlayerParticles[plyId] = StartNetworkedParticleFxLoopedOnEntityBone(name, entityTarget, offset.x, offset.y, offset.z, rot.x, rot.y, rot.z, boneIndex, scale + 0.0, 0, 0, 0, 1065353216, 1065353216, 1065353216, 0)
         if color then
             if color[1] and type(color[1]) == 'table' then
                 local randomIndex = math.random(1, #color)
@@ -419,6 +439,9 @@ function EmoteCommandStart(source, args, raw)
             return
         elseif RP.AnimalEmotes[name] ~= nil then
             OnEmotePlay(RP.AnimalEmotes[name])
+            return
+        elseif RP.Exits[name] ~= nil then
+            OnEmotePlay(RP.Exits[name])
             return
         elseif RP.PropEmotes[name] ~= nil then
             if RP.PropEmotes[name].AnimationOptions.PropTextureVariations then
@@ -531,6 +554,7 @@ function OnEmotePlay(EmoteName, textureVariation)
     end
 
     ChosenDict, ChosenAnimation, ename = table.unpack(EmoteName)
+    ChosenAnimOptions = EmoteName.AnimationOptions
     AnimationDuration = -1
 
     if ChosenDict == "Expression" then
@@ -631,6 +655,7 @@ function OnEmotePlay(EmoteName, textureVariation)
                 PtfxNoProp = false
             end
             Ptfx1, Ptfx2, Ptfx3, Ptfx4, Ptfx5, Ptfx6, PtfxScale = table.unpack(EmoteName.AnimationOptions.PtfxPlacement)
+            PtfxBone = EmoteName.AnimationOptions.PtfxBone
             PtfxColor = EmoteName.AnimationOptions.PtfxColor
             PtfxInfo = EmoteName.AnimationOptions.PtfxInfo
             PtfxWait = EmoteName.AnimationOptions.PtfxWait
@@ -640,7 +665,7 @@ function OnEmotePlay(EmoteName, textureVariation)
             -- RunAnimationThread() -- ? This call should not be required, see if needed with tests
 
             TriggerServerEvent("rpemotes:ptfx:sync", PtfxAsset, PtfxName, vector3(Ptfx1, Ptfx2, Ptfx3),
-                vector3(Ptfx4, Ptfx5, Ptfx6), PtfxScale, PtfxColor)
+                vector3(Ptfx4, Ptfx5, Ptfx6), PtfxBone, PtfxScale, PtfxColor)
         else
             DebugPrint("Ptfx = none")
             PtfxPrompt = false

@@ -3,7 +3,7 @@
 
 fx_version 'cerulean'
 game 'gta5'
-version '1.0.9'
+version '1.1.0'
 lua54 'yes'
 
 dependencies {
@@ -36,6 +36,7 @@ client_scripts {
     'NativeUI.lua',
     'client/AnimationList.lua',
     'client/AnimationListCustom.lua',
+    'client/Crouch.lua',
     'client/Emote.lua',
     'client/EmoteMenu.lua',
     'client/Keybinds.lua',
