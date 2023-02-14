@@ -39,6 +39,8 @@ Config = {
     RagdollAsToggle = true,
     -- You can disable the Facial Expressions menu here.
     ExpressionsEnabled = true,
+    -- Saves expression style to client and applies them on joining
+    PersistentExpression = true,
     -- You can disable the Walking Styles menu here.
     WalkingStylesEnabled = true,
     -- Saves walk styles to client and applies them periodically
@@ -63,10 +65,19 @@ Config = {
     HandsupKeybindEnabled = false,
     HandsupKeybind = 'h', -- Get the button string here https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard/
     -- You can disable the fingrer pointing here / change the keybind. It is currently set to B
-    PointingKeybindEnabled = false,
+    PointingEnabled = false,
+    PointingKeybindEnabled = true,
     PointingKeybind = 'b', -- Get the button string here https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard/
-    CrouchKeybindEnabled = false,
-    CrouchKeybind = 'lcontrol', -- Get the button string here https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard/
+    -- If crouching should be enabled.
+    CrouchEnabled = true,
+    CrouchKeybindEnabled = true, -- If true, crouching will use keybinds.
+    CrouchKeybind = 'lcontrol', -- The default crouch keybind, get the button string here: https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard/
+    CrouchOverride = false, -- If true, you won't enter stealth mode even if the crouch key and the "duck" key are the same.
+    -- If crawling should be enabled.
+    CrawlEnabled = true,
+    CrawlKeybindEnabled = true, -- If true, crawling will use keybinds.
+    CrawlKeybind = 'rcontrol', -- The default crawl keybind, get the button string here: https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard/
+    -- Check for updates
 	CheckForUpdates = true,
 }
 
