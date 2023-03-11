@@ -61,13 +61,13 @@ Config = {
     AnimalEmotesEnabled = true,
     -- Used to enable or disable the search feature in the menu.
     Search = true,
-    -- You can disable the handsup here / change the keybind. It is currently set to H
+    -- You can disable the handsup here / change the keybind. It is currently set to Y
     HandsupKeybindEnabled = false,
-    HandsupKeybind = 'h', -- Get the button string here https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard/
+    HandsupKeybind = 'Y', -- Get the button string here https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard/
     -- You can disable the fingrer pointing here / change the keybind. It is currently set to B
     PointingEnabled = false,
     PointingKeybindEnabled = true,
-    PointingKeybind = 'b', -- Get the button string here https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard/
+    PointingKeybind = 'B', -- Get the button string here https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard/
     -- If crouching should be enabled.
     CrouchEnabled = true,
     CrouchKeybindEnabled = true, -- If true, crouching will use keybinds.
